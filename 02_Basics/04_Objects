@@ -1,0 +1,57 @@
+//Using Singleton/ constructor methods object creation
+
+const tinderUser = new Object();
+// const tinderUser2 = {}; //empty Object
+
+tinderUser.id = "123abc"
+tinderUser.name = "sammy"
+tinderUser.isLoggedIn = false
+
+//console.log(tinderUser);
+
+const RegularUser = {
+    email :"sammy@gmail.com",
+    fullName: {                             //object inside object
+        UserfullName: {
+            firstName: "sammy",
+            lastName: "patil"
+        }
+    }
+}
+
+// Accessing the values from object
+console.log(RegularUser.fullName.UserfullName);
+console.log(RegularUser.email);
+console.log(RegularUser["email"]);
+
+console.log(RegularUser.tinderUser);                //undefined 
+
+// defining object using key and value pair
+ const obj1 = {1 : "a", 2 : "b"}
+ const obj2 = {3: "c", 4: "d"}
+
+console.log(obj1, obj2);
+const obj = {obj1, obj2}
+console.log(obj);   //object shows as object inside object as key value pair 
+
+// Object.assign():  static method copies all enumerable own properties from one or
+//more source objects to a target object. It returns the modified target object.
+const obj3 = Object.assign(obj1, obj2);
+console.log(obj3); 
+
+//Object.create() : static method creates a new object, using an existing 
+//object as the prototype of the newly created object.
+
+const Person = {
+    isHuman : false,
+    printIntro : function(){
+        console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+    },
+};
+
+const me = Object.create(Person);
+me.name = "John";
+me.isHuman = true;
+
+me.printIntro();
+

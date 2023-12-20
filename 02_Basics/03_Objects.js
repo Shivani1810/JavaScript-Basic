@@ -1,6 +1,8 @@
-//Singleton
-
-//object literal
+//Javascript Objects: - One of Js data types
+//                    - Stores various Keyed collections and more complex entities
+//                    - there are 2 ways to declare an object 1.Literal objects  2. Constructor methods
+//
+// Using Literal Objects----
 
 const mySym = Symbol("key1")        //Symbol declartion
 

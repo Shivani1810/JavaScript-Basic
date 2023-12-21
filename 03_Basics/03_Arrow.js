@@ -4,7 +4,7 @@ const user = {
 
     welcomeMessage: function(){
         console.log(`${this.username}, welcome to wesite`);         //here this refers to current context.
-        console.log(this);                                          //here thisrefers to current object in scope
+        console.log(this);                                          //here this refers to current object in scope
     }
 }
 // user.welcomeMessage();
@@ -58,3 +58,4 @@ console.log(addTwoN(3., 4));
 const name = (num1, num2) => ({username: 'Shivani'});
 
 console.log(name(1, 3));
+
